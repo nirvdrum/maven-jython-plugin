@@ -12,8 +12,9 @@ Current Status
 
 	The plugin is admittedly in a very nascent state.  It has, however, been used to generate commercial software.  We use it to 
 	build our open source WebReboot(R) command-line tool.  The  plugin is available as open source software
-	under the {{{http://www.apache.org/licenses/LICENSE-2.0.html}Apache Software License v2}}.  Unfortunately, we do not yet have
-	a publicly accessible Subversion repository, but you can download and view the sources from the {{{http://dev.servprise.com/maven-repository/com/servprise/maven/plugins/maven-jython-plugin/0.1/maven-jython-plugin-0.1-sources.jar}sources jar}}.
+	under the {{{http://www.apache.org/licenses/LICENSE-2.0.html}Apache Software License v2}}.
+	
+	You can check out the code from our public Subversion repository at: {{{http://dev.servprise.com/svn/maven-jython-plugin/trunk/}http://dev.servprise.com/svn/maven-jython-plugin/trunk/}}.
 
 	We will update this page as the plugin matures, but if you'd like to keep in touch with the ongoings, you may want to subscribe to our
 	{{{http://dev.servprise.com/weblog/}weblog}}.  In the interest of full disclosure, please note that this weblog also contains
