@@ -1,0 +1,29 @@
+Inferred Package Structure
+
+	Jython is a great language-level tool for executing Python within a JVM.
+	There is a divide, however, between the Python world and the Java world.
+	Jython generally does a good job bridging between the two, but falls short in a few areas, in our opinion.
+	One such way is in compiling Jython source files to Java classes.
+	
+	Jython uses a tool called <jythonc> for Java class generation and compilation.
+	This tool executes without any regard to physical directory structure and by default
+	places all generated Java classes into the default package.  For a variety of reasons,
+	not providing packages for Java classes is generally frowned upon.  To its credit,
+	<jythonc> does have a flag for providing a package for a generated class, but this
+	package name must be provided -- i.e., it is not inferred from the physical directory
+	structure as is the case for <javac>.
+	
+	The maven-jython-plugin attempts to bring <jythonc>'s behavior a little closer to that
+	of <javac>'s.  This is certainly not warranted in all cases, but for the use case this
+	plugin addresses (integrating Jython classes in a Java project), it makes sense.
+	
+	Just to clarify, if you have the following file:
+	
+	<$basedir/src/main/jython/com/example/whatever/Program.py>
+	
+	then that file will be compiled as:
+	
+	<com.example.whatever.Program>
+	
+	This is all done without any additional configuration, so you can build hierarchies of Jython
+	source files and be assured that they will be compiled into an appropriate Java package.

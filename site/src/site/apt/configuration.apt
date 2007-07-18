@@ -1,0 +1,120 @@
+Plugin Configuration
+
+	The maven-jython-plugin is mostly a façade to the <jythonc> tool.  If
+	you are familiar with the configuration items of that tool, then you should
+	pick up the plugin configuration quickly.  Of course, since the intention
+	is to improve upon what jythonc provides, there are additional configuration
+	items as well, while others have been removed.  As we push forward to a final,
+	stable release, these options may change.  Any such change will be noted on the
+	main page to reduce user confusion.
+	
+* jythonHome (default: None -- must be provided)
+	
+	This element must point to a valid Jython installation.  As of this writing, Jython 2.2-beta-1
+	is the preferred release to be used.  maven-jython-plugin has only been tested with 2.2-beta-1.
+	
+	You can specify the full path to your installation via either a configuration element in your POM:
+	
++------------------------------------------+
+<jythonHome>C:\dev\jython2.2b1</jythonHome>
++------------------------------------------+
+	
+	or via the command line, with the expression:
+	
++---------------------------------------+
+'-Djython.jythonHome=C:\dev\jython2.2b1'
++---------------------------------------+
+	
+	Obviously, you need to account for the path for your own Jython installation.
+	
+* sourceDir (default: $basedir/src/main/jython)
+
+	By default, the <sourceDir> value is set to <$basedir/src/main/jython>, so that your project's
+	main Jython source files sit alongside their Java brethren.  If you are using a non-standard directory
+	layout, then you can override the <sourceDir> value:
+	
++-----------------------------------------------------+
+<sourceDir>C:\temp\my_project\jython_files</sourceDir>
++-----------------------------------------------------+
+	
+	or via the command line, with the expression:
+	
++---------------------------------------------------+
+'-Djython.sourceDir=C:\temp\my_project\jython_files'
++---------------------------------------------------+
+
+* testSourceDir (default: $basedir/test/main/jython)
+
+	By default, the <testSourceDir> value is set to <$basedir/test/main/jython>, so that your project's
+	test Jython source files sit alongside their Java brethren.  If you are using a non-standard directory
+	layout, then you can override the <testSourceDir> value:
+	
++-------------------------------------------------------------------+
+<testSourceDir>C:\temp\my_project\jython_files\tests</testSourceDir>
++-------------------------------------------------------------------+
+	
+	or via the command line, with the expression:
+	
++-------------------------------------------------------------+
+'-Djython.testSourceDir=C:\temp\my_project\jython_files\tests'
++-------------------------------------------------------------+
+
+
+* deep (default: false)
+
+	If you are familiar with <jythonc>, you know what this configuration item does.  It is a boolean
+	value, so set it to "true" if you wish to deep compile your sources.
+	
+	It is extremely likely that this option will be removed in the next release, in favor of a more
+	maven-friendly approach.  Please see the {{{faq.html}FAQ}} for more details on how this may proceed.
+	Until then, use this configuration item with caution.
+	
++-------------------------------------------------------------------+
+<deep>true</deep>
++-------------------------------------------------------------------+
+	
+	or via the command line, with the expression:
+	
++-------------------------------------------------------------+
+'-Djython.deep=true'
++-------------------------------------------------------------+
+
+
+* core (default: false)
+
+	If you are familiar with <jythonc>, you know what this configuration item does.  It is a boolean
+	value, so set it to "true" if you wish to deep compile your sources.
+	
+	It is extremely likely that this option will be removed in the next release, in favor of a more
+	maven-friendly approach.  Please see the {{{faq.html}FAQ}} for more details on how this may proceed.
+	Until then, use this configuration item with caution.
+	
++-------------------------------------------------------------------+
+<core>true</core>
++-------------------------------------------------------------------+
+	
+	or via the command line, with the expression:
+	
++-------------------------------------------------------------+
+'-Djython.core=true'
++-------------------------------------------------------------+
+
+
+* all (default: false)
+
+	If you are familiar with <jythonc>, you know what this configuration item does.  It is a boolean
+	value, so set it to "true" if you wish to deep compile your sources.
+	
+	It is extremely likely that this option will be removed in the next release, in favor of a more
+	maven-friendly approach.  Please see the {{{faq.html}FAQ}} for more details on how this may proceed.
+	Until then, use this configuration item with caution.
+	
++-------------------------------------------------------------------+
+<all>true</all>
++-------------------------------------------------------------------+
+	
+	or via the command line, with the expression:
+	
++-------------------------------------------------------------+
+'-Djython.all=true'
++-------------------------------------------------------------+

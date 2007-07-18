@@ -1,0 +1,20 @@
+Running the Jython Shell
+
+  As a convenience to using the <jython> command, the maven-jython-plugin has
+  a means of running the Jython shell.  This is in further pursuit of allowing
+  a user to get started running Jython immediately, without having to do a full
+  local installation of the project.
+  
+  In order to use the Jython shell, your project must be configured to use the
+  maven-jython-plugin.  If it is not already, please review the sections on
+  common setup in {{{usage.html}the usage guide}}.
+  
+  Once setup, you can start an interactive Jython shell by executing the following
+  from a system shell in your project's directory:
+  
++---------------+
+mvn jython:shell
++---------------+
+  
+  Maven will fetch any necessary dependencies and when all done, you'll have an
+  interactive Jython shell to play around with.

@@ -1,0 +1,110 @@
+Plugin Usage
+
+* Common Setup
+
+	In order to use the plugin, you'll need to add some configuration items to your POM.
+	
+	First, you'll need to add the Servprise repository:
+	
++-----------------------------------------------------------+
+<project>
+...
+  <repositories>
+    <repository>
+      <id>Servprise Repository</id>
+      <url>http://dev.servprise.com/maven-repository</url>
+    </repository>
+  </repositories>
+...
+</project>
++-----------------------------------------------------------+
+	
+	Next, you'll need to add the plugin as dependency of your project:
+	
++-----------------------------------------------------+
+<project>
+...
+  <dependencies>
+    <dependency>
+      <groupId>com.servprise.maven.plugins</groupId>
+      <artifactId>maven-jython-plugin</artifactId>
+      <version>0.1</version>
+      <scope>compile</scope>
+    </dependency>
+  </dependencies>
+...
+</project>
++-----------------------------------------------------+
+	
+	Finally, you'll want to tie the maven-jython-plugin into your build process.  In order to do this, add something similar to the following:
+
+* Building Main Sources
+
+	The POM snippet below illustrates common usage of the plugin to build your
+	project's main Jython files.  If you do not use the common directory structure
+	(i.e., <$basedir/src/main/jython/>), then you will have to review the {{{configuration.html}configuration guide}}.
+
++---------------------------------------------------------+
+<project>
+...
+  <build>
+    <plugins>
+      <plugin>
+        <artifactId>maven-jython-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>compile</id>
+            <configuration>
+              <jythonHome>C:\dev\jython2.2b1</jythonHome>
+            </configuration>
+            <goals>
+              <goal>compile</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+...
+</project>
++---------------------------------------------------------+
+	
+	Note the the <jythonHome> configuration element is required, implying that you must have Jython installed
+	locally on your system.  We hope to relax that requirement in future releases, but that will likely rely on changes
+	to be made in the way Jython is distributed.
+
+
+* Building Test Sources
+
+	Building test sources is identical to building the main sources, except that you execute the <testCompile> goal
+	rather than <compile> goal.  Also note that the execution ID should be different as well, in the event that you
+	need to compile both main and test Jython sources.
+	
+	The POM snippet below illustrates common usage of the plugin to build your
+	project' test Jython files.  If you do not use the common directory structure
+	(i.e., <$basedir/test/main/jython/>), then you will have to review the {{{configuration.html}configuration guide}}.
+
++---------------------------------------------------------+
+<project>
+...
+  <build>
+    <plugins>
+      <plugin>
+        <artifactId>maven-jython-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>testCompile</id>
+            <configuration>
+              <jythonHome>C:\dev\jython2.2b1</jythonHome>
+            </configuration>
+            <goals>
+              <goal>testCompile</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+...
+</project>
++---------------------------------------------------------+

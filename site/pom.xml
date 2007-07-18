@@ -1,0 +1,27 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.servprise.maven.plugins</groupId>
+  <artifactId>maven-jython-plugin-site</artifactId>
+  <version>0.1</version>
+  <name>Maven Jython Plugin</name>
+  <url>http://dev.servprise.com/maven-jython-plugin/</url>
+  <inceptionYear>2006</inceptionYear>
+  <distributionManagement>
+    <site>
+      <id>servprise-repository</id>
+	  <name>Servprise Repository</name>
+      <url>scp://plato/var/www/servprise.com/dev/maven-jython-plugin</url>
+    </site>
+  </distributionManagement>
+  <build>
+    <plugins>
+      <plugin>
+        <artifactId>maven-site-plugin</artifactId>
+        <configuration>
+          <locales>en</locales>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>

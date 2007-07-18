@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<project name="maven-jython-plugin">
+  <bannerLeft>
+    <name>Servprise</name>
+    <src>images/logo.png</src>
+    <href>http://dev.servprise.com/</href>
+  </bannerLeft>
+  <body>
+    <links>
+      <item name="WebReboot is a registered trademark of Servprise International, Inc. in the United States and/or other countries."/>
+      <item name="Servprise" href="http://www.servprise.com/"/>
+      <item name="Servprise Dev" href="http://dev.servprise.com/"/>
+      <item name="Weblog" href="http://dev.servprise.com/weblog/"/>
+    </links>
+
+	<menu name="Maven Jython Plugin">
+	  <item name="Home" href="index.html"/>
+	  <item name="Usage" href="usage.html"/>
+	  <item name="Configuration" href="configuration.html"/>
+	  <item name="Jython Shell" href="shell.html"/>
+      <item name="FAQ" href="faq.html"/>     
+    </menu>
+
+	<menu name="Servprise Products">
+	  <item name="WebReboot&amp;reg; Enterprise" href="http://www.servprise.com/WebRebootEnterprise.html"/>
+	  <item name="WebReboot&amp;reg; 3.0" href="http://www.servprise.com/WebReboot.html"/>
+	</menu>
+	
+	<menu name="Servprise Dev">
+	  <item name="Community Support (Fora)" href="http://dev.servprise.com/fora/"/>
+	  <item name="Email Support" href="mailto:support@servprise.com"/>
+	  <item name="Weblog" href="http://dev.servprise.com/weblog/"/>
+	</menu>
+  </body>
+</project>
