@@ -1,0 +1,57 @@
+Frequently Asked Questions
+
+  [[1]] <<Where do I send bugs/patches/complaints/praise/questions/etc?>>
+  
+  	At some point, this plugin will probably migrate to either the ASF or Codehaus, and at
+  	that time, we will use whatever infrastructure and processes they have in place.  The
+  	only reason it hasn't thus far was because of lack of clarification on this process
+  	and because we didn't have time to jump through the necessary hoops (the lead developer
+  	of this plugin is an ASF committer, but not a Codehaus member).
+  	
+  	In any event, for the interim, please direct any of the above communication to our
+  	{{{mailto:support@servprise.com}support alias}}, where it will be addressed.
+
+  [[2]] <<How do I build a wholly contained application?>>
+
+	Using the maven-dependency-plugin is probably the best way at building a wholly
+    contained Jython application.  With this plugin, you can unpack the Jython JAR and
+    bundle it with your own application.  This will allow you to distribute a single JAR
+    to your customers, relieving the requirement of having Jython installed locally.
+    
+    Note that the maven-dependency-plugin must execute prior to the <package> phase, so that
+    the distribution directory will contain both your class files and the Jython class files.
+    In maven 2.0.x, there is no "pre-package" phase, so you must arbitrarily choose one that will
+    execute before <package>.  In the following example, we bind to the <test> phase, since we
+    have no Jython test sources.  If you do, you should bind to some other phase occurring after
+    <test>, but before <package>.  Please read the "Build Lifecycle Phase Reference" section at
+    {http://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html} for further details.
+    
++--------------------------------------------------------+
+<project>
+...
+  <build>
+    <plugins>
+	  <plugin>
+	    <artifactId>maven-dependency-plugin</artifactId>
+	    <executions>
+	      <execution>
+	        <id>unpack-dependencies</id>
+	        <configuration>
+	          <excludeTransitive>true</excludeTransitive>
+	          <outputDirectory>
+	            ${project.build.outputDirectory}
+	          </outputDirectory>
+	        </configuration>
+	        <phase>test</phase>
+	        <goals>
+	          <goal>unpack-dependencies</goal>
+	        </goals>
+	      </execution>
+	    </executions>
+	  </plugin>
+	</plugins>
+  </build>
+...
+</project>
++--------------------------------------------------------+
+

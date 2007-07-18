@@ -1,0 +1,41 @@
+									-----
+									Maven Jython Plugin
+									-----
+									Servprise International, Inc.
+									-----
+
+Introduction
+
+	The maven-jython-plugin is a plugin for the {{{http://maven.apache.org/}Maven 2}} project management system that allows {{{http://www.jython.org}Jython}} to be integrated into your projects.
+
+Current Status
+
+	The plugin is admittedly in a very nascent state.  It has, however, been used to generate commercial software.  We use it to 
+	build our open source WebReboot(R) command-line tool.  The  plugin is available as open source software
+	under the {{{http://www.apache.org/licenses/LICENSE-2.0.html}Apache Software License v2}}.  Unfortunately, we do not yet have
+	a publicly accessible Subversion repository, but you can download and view the sources from the {{{http://dev.servprise.com/maven-repository/com/servprise/maven/plugins/maven-jython-plugin/0.1/maven-jython-plugin-0.1-sources.jar}sources jar}}.
+
+	We will update this page as the plugin matures, but if you'd like to keep in touch with the ongoings, you may want to subscribe to our
+	{{{http://dev.servprise.com/weblog/}weblog}}.  In the interest of full disclosure, please note that this weblog also contains
+	posts unrelated to this plugin, mostly for Servprise product developments.  We do try to make good use of categories so that you
+	can filter out posts as appropriate, however.
+
+Features
+	
+	* Easily fire up an interactive Jython shell
+	
+	* Compile main Jython source files to Java classes
+	
+	* Compile test Jython source files to Java classes
+	
+	* {{{inferred-packages.html}Inferred package structure}} to make life simpler
+
+Additional Information
+
+	As the plugin evolves, so will the documentation.  The following should be enough to get you started, however:
+
+	{{{usage.html}How to Use the Plugin}}
+	
+	{{{configuration.html}How to Configure the Plugin}}
+	
+	{{{shell.html}Running the Jython Shell}}
