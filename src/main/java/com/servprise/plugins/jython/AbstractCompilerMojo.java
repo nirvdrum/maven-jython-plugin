@@ -16,19 +16,15 @@
 
 package com.servprise.plugins.jython;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FilenameFilter;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-
 import org.apache.maven.artifact.Artifact;
 import org.apache.maven.plugin.AbstractMojo;
 import org.apache.maven.plugin.MojoExecutionException;
 import org.apache.maven.plugin.MojoFailureException;
+
+import java.io.*;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 
 /**
  * Base set of functionality for concrete mojos to compile
@@ -121,6 +117,9 @@ public abstract class AbstractCompilerMojo extends AbstractMojo
         
         // Tell the jython class that we want to execute the jythonc tool.
         partialArgs.add(jythonHome + "/Tools/jythonc/jythonc.py");
+
+        // Disable the warning message about jythonc being deprecated.
+        partialArgs.add("-i");
         
         
         
@@ -212,7 +211,7 @@ public abstract class AbstractCompilerMojo extends AbstractMojo
                 ret.addAll(getJythonFiles(file));
             }
             
-            // Otherwise, add the file directory to the returned output.
+            // Otherwise, add the file to the returned output.
             else
             {
                 ret.add(file);
