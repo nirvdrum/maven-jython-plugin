@@ -28,7 +28,7 @@ Plugin Usage
     <dependency>
       <groupId>com.servprise.maven.plugins</groupId>
       <artifactId>maven-jython-plugin</artifactId>
-      <version>0.1</version>
+      <version>0.2</version>
       <scope>compile</scope>
     </dependency>
   </dependencies>
@@ -55,7 +55,7 @@ Plugin Usage
           <execution>
             <id>compile</id>
             <configuration>
-              <jythonHome>C:\dev\jython2.2b1</jythonHome>
+              <jythonHome>C:\dev\jython2.2</jythonHome>
             </configuration>
             <goals>
               <goal>compile</goal>
@@ -95,7 +95,7 @@ Plugin Usage
           <execution>
             <id>testCompile</id>
             <configuration>
-              <jythonHome>C:\dev\jython2.2b1</jythonHome>
+              <jythonHome>C:\dev\jython2.2</jythonHome>
             </configuration>
             <goals>
               <goal>testCompile</goal>

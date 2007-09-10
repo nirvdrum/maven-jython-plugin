@@ -1,0 +1,18 @@
+Changelog
+
+0.2 -- Released 10-September-2007
+
+    <Minor release, updating to work with latest version of Jython and Maven.>
+
+    New features:
+
+    * Upgraded to Jython 2.2
+
+    * Upgraded to Maven 2.0.7
+
+    * Suppressed the jythonc deprecation warning added in Jython 2.2
+
+
+0.1 -- Released 11-April-2007
+
+    <Initial release.>

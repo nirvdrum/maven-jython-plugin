@@ -16,13 +16,13 @@ Plugin Configuration
 	You can specify the full path to your installation via either a configuration element in your POM:
 	
 +------------------------------------------+
-<jythonHome>C:\dev\jython2.2b1</jythonHome>
+<jythonHome>C:\dev\jython2.2</jythonHome>
 +------------------------------------------+
 	
 	or via the command line, with the expression:
 	
 +---------------------------------------+
-'-Djython.jythonHome=C:\dev\jython2.2b1'
+'-Djython.jythonHome=C:\dev\jython2.2'
 +---------------------------------------+
 	
 	Obviously, you need to account for the path for your own Jython installation.

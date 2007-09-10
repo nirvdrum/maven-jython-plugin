@@ -35,6 +35,8 @@ Additional Information
 
 	As the plugin evolves, so will the documentation.  The following should be enough to get you started, however:
 
+    {{{changelog.html}Changelog}}
+
 	{{{usage.html}How to Use the Plugin}}
 	
 	{{{configuration.html}How to Configure the Plugin}}
