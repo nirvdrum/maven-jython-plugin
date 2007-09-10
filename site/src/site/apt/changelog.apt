@@ -15,4 +15,4 @@ Changelog
 
 0.1 -- Released 11-April-2007
 
-    <Initial release.>
+    <Initial release, based on Jython 2.2 Beta 1.  Provides Jython compiler and shell plugins.>
