@@ -23,7 +23,7 @@
   <artifactId>maven-jython-plugin</artifactId>
   <packaging>maven-plugin</packaging>
   <name>Jython Maven Plugin</name>
-  <version>0.2-SNAPSHOT</version>
+  <version>0.2</version>
   <url>http://dev.servprise.com/</url>
   <build>
     <plugins>
