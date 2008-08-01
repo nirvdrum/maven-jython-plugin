@@ -28,7 +28,6 @@
 	</menu>
 	
 	<menu name="Servprise Dev">
-	  <item name="Community Support (Fora)" href="http://dev.servprise.com/fora/"/>
 	  <item name="Email Support" href="mailto:support@servprise.com"/>
 	  <item name="Weblog" href="http://dev.servprise.com/weblog/"/>
 	</menu>

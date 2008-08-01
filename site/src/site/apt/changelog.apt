@@ -1,5 +1,15 @@
 Changelog
 
+0.3 -- Released 01-August-2008
+
+   <Minor release, updating to work with latest version of Jython and Maven.>
+
+   New features:
+
+   * Upgraded to Jython 2.2.1
+
+   * Upgraded to Maven 2.0.9
+
 0.2 -- Released 10-September-2007
 
     <Minor release, updating to work with latest version of Jython and Maven.>
