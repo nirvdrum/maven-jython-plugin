@@ -80,7 +80,7 @@
   	<repository>
   		<id>servprise-repository</id>
 		<name>Servprise Repository</name>
-		<url>scp://plato/var/www/servprise.com/dev/maven-repository</url>
+		<url>scp://plato.servprise.office/var/www/servprise.com/dev/maven-repository</url>
 	</repository>
   </distributionManagement>
 </project>
