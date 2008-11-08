@@ -19,24 +19,7 @@ Plugin Usage
 </project>
 +-----------------------------------------------------------+
 	
-	Next, you'll need to add the plugin as dependency of your project:
-	
-+-----------------------------------------------------+
-<project>
-...
-  <dependencies>
-    <dependency>
-      <groupId>com.servprise.maven.plugins</groupId>
-      <artifactId>maven-jython-plugin</artifactId>
-      <version>0.2</version>
-      <scope>compile</scope>
-    </dependency>
-  </dependencies>
-...
-</project>
-+-----------------------------------------------------+
-	
-	Finally, you'll want to tie the maven-jython-plugin into your build process.  In order to do this, add something similar to the following:
+	Next, you'll want to tie the maven-jython-plugin into your build process.  In order to do this, add something similar to the following:
 
 * Building Main Sources
 
@@ -50,7 +33,9 @@ Plugin Usage
   <build>
     <plugins>
       <plugin>
+        <groupId>com.servprise.maven.plugins</groupId>
         <artifactId>maven-jython-plugin</artifactId>
+        <version>0.3</version>
         <executions>
           <execution>
             <id>compile</id>
